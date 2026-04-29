@@ -1,0 +1,38 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "projectSettings": {
+    "nodeVersion": "18.x"
+  },
+  "env": [
+    {
+      "key": "SMTP_HOST",
+      "description": "SMTP Server Host",
+      "type": "secret"
+    },
+    {
+      "key": "SMTP_PORT",
+      "description": "SMTP Server Port (usually 587 or 465)"
+    },
+    {
+      "key": "SMTP_USER",
+      "description": "SMTP User/Email",
+      "type": "secret"
+    },
+    {
+      "key": "SMTP_PASSWORD",
+      "description": "SMTP Password or App Password",
+      "type": "secret"
+    },
+    {
+      "key": "SMTP_FROM",
+      "description": "From email address"
+    },
+    {
+      "key": "SMTP_TO",
+      "description": "To email address (company email)"
+    }
+  ]
+}

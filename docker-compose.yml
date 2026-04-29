@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  akci-website:
+    build: .
+    container_name: akci-gebaeudereinigung
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - SMTP_FROM=${SMTP_FROM}
+      - SMTP_TO=${SMTP_TO}
+    restart: unless-stopped
+    networks:
+      - akci-network
+
+networks:
+  akci-network:
+    driver: bridge

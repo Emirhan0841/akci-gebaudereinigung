@@ -1,0 +1,22 @@
+{
+  "name": "AKCI Gebäudereinigung",
+  "short_name": "AKCI",
+  "description": "Professionelle Reinigungsdienste für Gewerbe und Privatkundschaft",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1aa5b8",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
