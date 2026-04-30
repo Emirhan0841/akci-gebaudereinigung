@@ -9,7 +9,6 @@ const navLinks = [
   { href: '/#home', label: 'Startseite' },
   { href: '/#about', label: 'Über uns' },
   { href: '/#services', label: 'Leistungen' },
-  { href: '/#gallery', label: 'Galerie' },
   { href: '/#contact', label: 'Kontakt' },
 ];
 
