@@ -1,10 +1,16 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import './globals.css';
 
 const COMPANY_NAME = 'AKCI Gebäudereinigung';
 const COMPANY_PHONE = '0176 647 529 95';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   title: `${COMPANY_NAME} | Professionelle Reinigungsdienste in Karlsruhe`,
@@ -28,11 +34,6 @@ export const metadata: Metadata = {
   icons: {
     icon: '/logo/icon.png',
     apple: '/logo/icon.png',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
   },
 };
 
