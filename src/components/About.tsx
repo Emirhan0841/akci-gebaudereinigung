@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { COMPANY } from '@/lib/constants';
 
 export function About() {
@@ -53,8 +54,18 @@ export function About() {
             </div>
           </div>
 
-          {/* Right Stats */}
+          {/* Right Image & Stats */}
           <div className="space-y-8">
+            {/* Office Image */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl h-72 w-full">
+              <Image
+                src="/Staubsauger2.png"
+                alt="AKCI Büro und Team"
+                fill
+                className="object-cover"
+              />
+            </div>
+
             <div className="bg-gradient-to-br from-primary-50 to-accent-50 p-8 rounded-2xl space-y-6">
               <div>
                 <p className="text-gray-600 mb-2">Geschäftsführer</p>

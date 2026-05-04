@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Hero() {
   return (
@@ -62,9 +63,14 @@ export function Hero() {
 
           {/* Right Image */}
           <div className="relative h-96 md:h-full hidden md:block">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-accent-400 rounded-2xl transform rotate-3 opacity-10"></div>
-            <div className="absolute inset-4 bg-gradient-to-br from-primary-400 to-accent-300 rounded-2xl transform -rotate-3 shadow-2xl flex items-center justify-center text-6xl">
-              🧹
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-accent-400 rounded-2xl transform rotate-3 opacity-20"></div>
+            <div className="absolute inset-4 rounded-2xl transform -rotate-3 shadow-2xl overflow-hidden">
+              <Image
+                src="/Fenster1.png"
+                alt="Professionelle Fensterreinigung"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

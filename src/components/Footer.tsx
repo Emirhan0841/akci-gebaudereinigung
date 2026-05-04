@@ -110,12 +110,12 @@ export function Footer() {
               © {new Date().getFullYear()} {COMPANY.name}. Alle Rechte vorbehalten.
             </p>
             <div className="flex gap-4 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">
+              <Link href="/datenschutz" className="hover:text-white transition-colors">
                 Datenschutz
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </Link>
+              <Link href="/impressum" className="hover:text-white transition-colors">
                 Impressum
-              </a>
+              </Link>
             </div>
           </div>
         </div>

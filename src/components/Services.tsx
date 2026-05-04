@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { SERVICES } from '@/lib/constants';
 import { useState } from 'react';
 
@@ -40,33 +41,45 @@ export function Services() {
 
         {/* Service Details */}
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 animate-slideUp">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="text-6xl mb-6">{selectedService.icon}</div>
-              <h3 className="text-3xl font-bold mb-4 text-gray-900">
-                {selectedService.name}
-              </h3>
-              <p className="text-lg text-gray-600 mb-8">
-                {selectedService.description}
-              </p>
-              <a
-                href="#contact"
-                className="inline-block px-6 py-3 bg-accent-500 text-white rounded-lg font-semibold hover:bg-accent-600 transition-colors"
-              >
-                Angebot einholen
-              </a>
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {/* Image */}
+            <div className="relative h-80 rounded-xl overflow-hidden shadow-md order-2 md:order-1">
+              <Image
+                src={selectedService.id === 1 ? '/Fenster1.png' : selectedService.id === 2 ? '/Staubsauger.png' : selectedService.id === 3 ? '/Außenfassade.png' : '/wischen2.png'}
+                alt={selectedService.name}
+                fill
+                className="object-cover"
+              />
             </div>
 
-            <div className="space-y-4">
-              <h4 className="text-xl font-bold text-gray-900 mb-6">Leistungen:</h4>
-              {selectedService.features.map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center mt-1">
-                    <span className="text-accent-600 font-bold text-sm">✓</span>
+            <div className="order-1 md:order-2 space-y-6">
+              <div>
+                <div className="text-6xl mb-6">{selectedService.icon}</div>
+                <h3 className="text-3xl font-bold mb-4 text-gray-900">
+                  {selectedService.name}
+                </h3>
+                <p className="text-lg text-gray-600 mb-8">
+                  {selectedService.description}
+                </p>
+                <a
+                  href="#contact"
+                  className="inline-block px-6 py-3 bg-accent-500 text-white rounded-lg font-semibold hover:bg-accent-600 transition-colors"
+                >
+                  Angebot einholen
+                </a>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">Leistungen:</h4>
+                {selectedService.features.map((feature, idx) => (
+                  <div key={idx} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center mt-1">
+                      <span className="text-accent-600 font-bold text-sm">✓</span>
+                    </div>
+                    <span className="text-gray-700 text-lg">{feature}</span>
                   </div>
-                  <span className="text-gray-700 text-lg">{feature}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
