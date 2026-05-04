@@ -82,6 +82,18 @@ export const SERVICES = [
       'Kostenoptimierung',
     ],
   },
+  {
+    id: 'winterdienst',
+    name: 'Winterdienst',
+    description: 'Zuverlässiger Schnee- und Eisdienst für sichere Wege und Flächen',
+    icon: '❄️',
+    features: [
+      'Schneeräumung',
+      'Eisbekämpfung',
+      'Streudienste',
+      'Rund um die Uhr verfügbar',
+    ],
+  },
 ] as const;
 
 export const SOCIAL_LINKS = {

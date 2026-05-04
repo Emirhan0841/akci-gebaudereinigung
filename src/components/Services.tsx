@@ -45,7 +45,7 @@ export function Services() {
             {/* Image */}
             <div className="relative h-80 rounded-xl overflow-hidden shadow-md order-2 md:order-1">
               <Image
-                src={selectedService.id === 'fensterreinigung' ? '/Fenster1.png' : selectedService.id === 'spezialreinigung' ? '/Staubsauger.png' : selectedService.id === 'fassadenreinigung' ? '/Außenfassade.png' : '/wischen2.png'}
+                src={selectedService.id === 'fensterreinigung' ? '/Fenster1.png' : selectedService.id === 'spezialreinigung' ? '/Staubsauger.png' : selectedService.id === 'fassadenreinigung' ? '/Außenfassade.png' : selectedService.id === 'winterdienst' ? '/wischen2.png' : '/wischen2.png'}
                 alt={selectedService.name}
                 fill
                 className="object-cover"
