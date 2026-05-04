@@ -2,12 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 // Validate environment variables
-const SMTP_HOST = process.env.SMTP_HOST;
-const SMTP_PORT = parseInt(process.env.SMTP_PORT || '587');
-const SMTP_USER = process.env.SMTP_USER;
-const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
-const SMTP_FROM = process.env.SMTP_FROM || 'noreply@akci-gebaeudereinigung.de';
-const SMTP_TO = process.env.SMTP_TO || 'akci.gebaeudereinigung@gmail.com';
+const SMTP_HOST = process.env['SMTP_HOST'] as string | undefined;
+const SMTP_PORT = parseInt(process.env['SMTP_PORT'] as string ?? '587', 10);
+const SMTP_USER = process.env['SMTP_USER'] as string | undefined;
+const SMTP_PASSWORD = process.env['SMTP_PASSWORD'] as string | undefined;
+const SMTP_FROM = process.env['SMTP_FROM'] ?? 'noreply@akci-gebaeudereinigung.de';
+const SMTP_TO = process.env['SMTP_TO'] ?? 'akci.gebaeudereinigung@gmail.com';
 
 // Rate limiting (simple in-memory implementation)
 const rateLimitMap = new Map<string, number[]>();
