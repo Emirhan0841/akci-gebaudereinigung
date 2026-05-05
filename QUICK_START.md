@@ -17,7 +17,9 @@ npm run dev
 ## 2️⃣ Erste Anpassungen
 
 ### Dein Logo verwenden
+
 Deine Logo-Dateien sind bereits in `public/logo/`. Die Website nutzt automatisch:
+
 - `icon.png` - für die Navigation
 - `logo.png` - wo benötigt
 - `schriftzug.png` - für Schriftzug-Variante
@@ -25,20 +27,22 @@ Deine Logo-Dateien sind bereits in `public/logo/`. Die Website nutzt automatisch
 Wenn du neue Logos hinzufügen möchtest, speichere sie einfach im selben Ordner.
 
 ### Unternehmensdaten anpassen
+
 Bearbeite `src/lib/constants.ts`:
 
 ```typescript
 export const COMPANY = {
-  name: 'AKCI Gebäudereinigung',           // Dein Name
-  phone: '0176 647 529 95',                // Deine Nummer
-  email: 'akci.gebaeudereinigung@gmail.com', // Deine Email
-  address: 'Rankestraße 6, 76137 Karlsruhe', // Deine Adresse
-  ceo: 'Gökhan Akci',                      // Geschäftsführer
-  taxId: '35045/27074',                    // Steuernummer
+  name: "AKCI Gebäudereinigung", // Dein Name
+  phone: "0176 647 529 95", // Deine Nummer
+  email: "akci.gebaeudereinigung@gmail.com", // Deine Email
+  address: "Volzstraße 7, 76185 Karlsruhe", // Deine Adresse
+  ceo: "Gökhan Akci", // Geschäftsführer
+  taxId: "35045/27074", // Steuernummer
 };
 ```
 
 ### Farben anpassen
+
 In `tailwind.config.ts` kannst du die Farben ändern:
 
 ```typescript
@@ -55,6 +59,7 @@ accent: {    // Hellgrün (highlight color)
 Das Formular funktioniert lokal auch ohne E-Mail-Versand. Um E-Mails zu aktivieren:
 
 ### Mit Gmail:
+
 1. Gehe zu [myaccount.google.com](https://myaccount.google.com)
 2. Security → App passwords → erstelle ein Passwort
 3. Erstelle `.env.local`:
@@ -71,6 +76,7 @@ SMTP_TO=akci.gebaeudereinigung@gmail.com
 4. Server neu starten: `npm run dev`
 
 ### Mit Outlook/Office 365:
+
 ```
 SMTP_HOST=smtp.office365.com
 SMTP_PORT=587
@@ -83,21 +89,24 @@ SMTP_TO=akci.gebaeudereinigung@gmail.com
 ## 4️⃣ Inhalte anpassen
 
 ### Über uns Section
+
 Bearbeite `src/components/About.tsx` - passe Text und Stärken an
 
 ### Leistungen/Services
+
 Bearbeite `src/lib/constants.ts` - das `SERVICES` Array enthält alle Services
 
 ### Galerie
+
 Bearbeite `src/components/Gallery.tsx` - ersetze die Placeholder-Bilder:
 
 ```typescript
 const galleryItems = [
   {
     id: 1,
-    title: 'Dein Projekt Titel',
-    category: 'Kategorie',
-    image: '/images/dein-bild.jpg', // Speichere Bilder in public/images/
+    title: "Dein Projekt Titel",
+    category: "Kategorie",
+    image: "/images/dein-bild.jpg", // Speichere Bilder in public/images/
   },
 ];
 ```
@@ -132,6 +141,7 @@ vercel
 ```
 
 ### Mit Docker:
+
 ```bash
 # Docker Image bauen
 docker build -t akci-site .
@@ -141,11 +151,13 @@ docker run -p 3000:3000 akci-site
 ```
 
 Oder mit Docker Compose:
+
 ```bash
 docker-compose up
 ```
 
 ### Traditionelles Hosting:
+
 1. `npm run build` ausführen
 2. Ordner `.next` und `public` hochladen
 3. Node.js Hosting konfigurieren
@@ -153,14 +165,14 @@ docker-compose up
 
 ## 7️⃣ Nützliche Dateien
 
-| Datei | Zweck |
-|-------|-------|
+| Datei                  | Zweck                                     |
+| ---------------------- | ----------------------------------------- |
 | `src/lib/constants.ts` | Unternehmensdaten, Services, Kontaktlinks |
-| `tailwind.config.ts` | Farben, Fonts, Theming |
-| `src/components/` | Alle Seiten-Komponenten |
-| `src/app/api/contact/` | Kontaktformular API |
-| `.env.example` | SMTP-Konfiguration Template |
-| `README.md` | Ausführliche Dokumentation |
+| `tailwind.config.ts`   | Farben, Fonts, Theming                    |
+| `src/components/`      | Alle Seiten-Komponenten                   |
+| `src/app/api/contact/` | Kontaktformular API                       |
+| `.env.example`         | SMTP-Konfiguration Template               |
+| `README.md`            | Ausführliche Dokumentation                |
 
 ## 📚 Weitere Ressourcen
 
@@ -171,20 +183,24 @@ docker-compose up
 ## 🆘 Häufige Probleme
 
 **"Port 3000 wird bereits verwendet"**
+
 ```bash
 npm run dev -- -p 3001  # Nutze Port 3001 statt 3000
 ```
 
 **"Kontaktformular sendet keine Emails"**
+
 - Überprüfe `.env.local` (muss neu geladen werden nach Änderung)
 - Teste mit `npm run dev` neu
 - Überprüfe SMTP-Daten in `.env.local`
 
 **"Bilder werden nicht angezeigt"**
+
 - Stelle sicher, dass Bilder in `public/` liegen
 - Nutze pfade wie `/images/bild.jpg` (mit /)
 
 **"Style/CSS fehlt"**
+
 - Taildwind CSS wird automatisch generiert
 - `npm install` nochmal ausführen
 - Browser Cache clearen (Ctrl+Shift+Del)

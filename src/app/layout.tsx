@@ -62,10 +62,10 @@ export default function RootLayout({
               description: 'Professionelle Reinigungsdienste für Gewerbe und Privatkundschaft',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Rankestraße 6',
+                streetAddress: 'Volzstraße 7',
                 addressLocality: 'Karlsruhe',
                 addressRegion: 'Baden-Württemberg',
-                postalCode: '76137',
+                postalCode: '76185',
                 addressCountry: 'DE',
               },
               telephone: COMPANY_PHONE,

@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
           <p>Beste Grüße,<br>Das Team von AKCI Gebäudereinigung</p>
           <hr>
           <p style="color: #999; font-size: 12px;">
-            Rankestraße 6, 76137 Karlsruhe<br>
+            Volzstraße 7, 76185 Karlsruhe<br>
             Tel: 0176 647 529 95<br>
             E-Mail: akci.gebaeudereinigung@gmail.com
           </p>

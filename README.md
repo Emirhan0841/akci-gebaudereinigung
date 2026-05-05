@@ -105,7 +105,7 @@ export const COMPANY = {
   name: 'AKCI Gebäudereinigung',
   phone: '0176 647 529 95',
   email: 'akci.gebaeudereinigung@gmail.com',
-  address: 'Rankestraße 6, 76137 Karlsruhe',
+  address: 'Volzstraße 7, 76185 Karlsruhe',
   ceo: 'Gökhan Akci',
   taxId: '35045/27074',
 };
