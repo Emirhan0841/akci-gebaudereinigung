@@ -182,7 +182,7 @@ export function Gallery() {
                   <img
                     src={currentImage}
                     alt={`${item.title}${label ? ` - ${label}` : ''}`}
-                    className={`w-full h-full object-contain transition-transform duration-300`}
+                    className={`w-full h-full object-cover transition-transform duration-300`}
                   />
                 </div>
 
