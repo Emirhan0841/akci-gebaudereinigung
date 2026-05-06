@@ -130,20 +130,16 @@ export function Gallery() {
             const currentImage = isBeforeAfter ? (showBefore ? item.before : item.after) : item.image;
             const label = isBeforeAfter ? (showBefore ? 'Vorher' : 'Nachher') : undefined;
 
-            const CardElement = isBeforeAfter ? 'button' : 'div';
-            const cardProps = isBeforeAfter
-              ? {
-                  onClick: () => toggleImage(item.id),
-                  type: 'button',
-                }
-              : {};
+            const baseClass = "group relative overflow-hidden rounded-xl shadow-lg animate-slideUp hover:shadow-xl transition-shadow";
+            const style = { animationDelay: `${idx * 100}ms` };
 
-            return (
-              <CardElement
+            return isBeforeAfter ? (
+              <button
                 key={item.id}
-                className="group relative overflow-hidden rounded-xl shadow-lg animate-slideUp hover:shadow-xl transition-shadow"
-                style={{ animationDelay: `${idx * 100}ms` }}
-                {...cardProps}
+                onClick={() => toggleImage(item.id)}
+                type="button"
+                className={baseClass}
+                style={style}
               >
                 {/* Image Container */}
                 <div className="relative w-full aspect-[3/4] bg-gray-200 overflow-hidden">
@@ -174,7 +170,27 @@ export function Gallery() {
                     </div>
                   </div>
                 )}
-              </CardElement>
+              </button>
+            ) : (
+              <div
+                key={item.id}
+                className={baseClass}
+                style={style}
+              >
+                {/* Image Container */}
+                <div className="relative w-full aspect-[3/4] bg-gray-200 overflow-hidden">
+                  <img
+                    src={currentImage}
+                    alt={`${item.title}${label ? ` - ${label}` : ''}`}
+                    className={`w-full h-full object-contain transition-transform duration-300`}
+                  />
+                </div>
+
+                {/* Title Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+                  <h3 className="text-white text-lg font-bold text-center">{item.title}</h3>
+                </div>
+              </div>
             );
           })}
         </div>
