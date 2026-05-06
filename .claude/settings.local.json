@@ -11,7 +11,9 @@
       "Bash(timeout 10 npm run dev)",
       "Bash(timeout 15 npm run dev)",
       "Bash(npm run *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\emirh\\\\VscodeProjects\\\\akci-gebäudereinigung\" -Name)",
+      "Bash(Select-String \".env\")"
     ]
   },
   "enabledPlugins": {

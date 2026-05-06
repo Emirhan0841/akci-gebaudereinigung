@@ -62,55 +62,59 @@ export async function POST(request: NextRequest) {
 
     // Only send email if SMTP is configured
     if (SMTP_HOST && SMTP_USER && SMTP_PASSWORD) {
-      const transporter = nodemailer.createTransport({
-        host: SMTP_HOST,
-        port: SMTP_PORT,
-        secure: SMTP_PORT === 465,
-        auth: {
-          user: SMTP_USER,
-          pass: SMTP_PASSWORD,
-        },
-      });
+      try {
+        const transporter = nodemailer.createTransport({
+          host: SMTP_HOST,
+          port: SMTP_PORT,
+          secure: SMTP_PORT === 465,
+          auth: {
+            user: SMTP_USER,
+            pass: SMTP_PASSWORD,
+          },
+        });
 
-      // Email to company
-      await transporter.sendMail({
-        from: SMTP_FROM,
-        to: SMTP_TO,
-        subject: `Neue Anfrage von ${name} - ${service}`,
-        html: `
-          <h2>Neue Anfrage erhalten</h2>
-          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-          <p><strong>E-Mail:</strong> ${escapeHtml(email)}</p>
-          <p><strong>Telefon:</strong> ${escapeHtml(phone)}</p>
-          <p><strong>Leistung:</strong> ${escapeHtml(service)}</p>
-          <p><strong>Nachricht:</strong></p>
-          <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
-        `,
-      });
+        // Email to company
+        await transporter.sendMail({
+          from: SMTP_FROM,
+          to: SMTP_TO,
+          subject: `Neue Anfrage von ${name} - ${service}`,
+          html: `
+            <h2>Neue Anfrage erhalten</h2>
+            <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+            <p><strong>E-Mail:</strong> ${escapeHtml(email)}</p>
+            <p><strong>Telefon:</strong> ${escapeHtml(phone)}</p>
+            <p><strong>Leistung:</strong> ${escapeHtml(service)}</p>
+            <p><strong>Nachricht:</strong></p>
+            <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+          `,
+        });
 
-      // Confirmation email to customer
-      await transporter.sendMail({
-        from: SMTP_FROM,
-        to: email,
-        subject: 'Wir haben deine Anfrage erhalten - AKCI Gebäudereinigung',
-        html: `
-          <h2>Vielen Dank für deine Anfrage!</h2>
-          <p>Hallo ${escapeHtml(name)},</p>
-          <p>wir haben deine Anfrage erhalten und werden dich schnellstmöglich kontaktieren.</p>
-          <p>Deine Anfrage:</p>
-          <ul>
-            <li><strong>Leistung:</strong> ${escapeHtml(service)}</li>
-            <li><strong>Nachricht:</strong> ${escapeHtml(message).replace(/\n/g, '<br>')}</li>
-          </ul>
-          <p>Beste Grüße,<br>Das Team von AKCI Gebäudereinigung</p>
-          <hr>
-          <p style="color: #999; font-size: 12px;">
-            Volzstraße 7, 76185 Karlsruhe<br>
-            Tel: 0176 647 529 95<br>
-            E-Mail: akci.gebaeudereinigung@gmail.com
-          </p>
-        `,
-      });
+        // Confirmation email to customer
+        await transporter.sendMail({
+          from: SMTP_FROM,
+          to: email,
+          subject: 'Wir haben deine Anfrage erhalten - AKCI Gebäudereinigung',
+          html: `
+            <h2>Vielen Dank für deine Anfrage!</h2>
+            <p>Hallo ${escapeHtml(name)},</p>
+            <p>wir haben deine Anfrage erhalten und werden dich schnellstmöglich kontaktieren.</p>
+            <p>Deine Anfrage:</p>
+            <ul>
+              <li><strong>Leistung:</strong> ${escapeHtml(service)}</li>
+              <li><strong>Nachricht:</strong> ${escapeHtml(message).replace(/\n/g, '<br>')}</li>
+            </ul>
+            <p>Beste Grüße,<br>Das Team von AKCI Gebäudereinigung</p>
+            <hr>
+            <p style="color: #999; font-size: 12px;">
+              Volzstraße 7, 76185 Karlsruhe<br>
+              Tel: 0176 647 529 95<br>
+              E-Mail: akci.gebaeudereinigung@gmail.com
+            </p>
+          `,
+        });
+      } catch (emailError) {
+        console.error('Email sending failed:', emailError);
+      }
     }
 
     return NextResponse.json({ success: true }, { status: 200 });
