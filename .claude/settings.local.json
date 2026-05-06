@@ -13,7 +13,8 @@
       "Bash(npm run *)",
       "Bash(git push *)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\emirh\\\\VscodeProjects\\\\akci-gebäudereinigung\" -Name)",
-      "Bash(Select-String \".env\")"
+      "Bash(Select-String \".env\")",
+      "Bash(Test-Path *)"
     ]
   },
   "enabledPlugins": {

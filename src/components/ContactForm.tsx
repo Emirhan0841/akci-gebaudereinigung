@@ -12,6 +12,12 @@ interface FormData {
   message: string;
 }
 
+function encodeFormData(data: Record<string, string>): string {
+  return Object.entries(data)
+    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+    .join('&');
+}
+
 export function ContactForm() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,12 +28,17 @@ export function ContactForm() {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('/api/contact', {
+      const formData = {
+        'form-name': 'contact',
+        ...data,
+      };
+
+      const response = await fetch('/', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify(data),
+        body: encodeFormData(formData),
       });
 
       if (response.ok) {
@@ -123,7 +134,8 @@ export function ContactForm() {
 
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-lg p-8 animate-slideUp">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+            <form onSubmit={handleSubmit(onSubmit)} name="contact" data-netlify="true" className="space-y-5">
+              <input type="hidden" name="form-name" value="contact" />
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
@@ -197,7 +209,7 @@ export function ContactForm() {
                   <option value="Fensterreinigung">Fensterreinigung</option>
                   <option value="Fassadenreinigung">Fassadenreinigung</option>
                   <option value="Spezialreinigung">Spezialreinigung</option>
-                  <option value="Gebäudverwaltung">Gebäudverwaltung</option>
+                  <option value="Gebäudeverwaltung">Gebäudeverwaltung</option>
                   <option value="Sonstiges">Sonstiges</option>
                 </select>
                 {errors.service && (
