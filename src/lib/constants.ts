@@ -1,11 +1,11 @@
 export const COMPANY = {
   name: 'AKCI Gebäudereinigung',
-  phone: '0178 3907693',
+  phone: '0176 64752995',
   email: 'akci.gebaeudereinigung@gmail.com',
   address: 'Volzstraße 7, 76185 Karlsruhe',
   ceo: 'Gökhan Akci',
   taxId: '35045/27074',
-  whatsapp: '+491783907693',
+  whatsapp: '+4917664752995',
   telegram: '@akcigebaudereinigung',
 } as const;
 
