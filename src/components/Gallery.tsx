@@ -14,14 +14,14 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    title: 'Badreinigung',
+    title: 'Grundreinigung',
     category: 'Innenraum',
     before: '/badalt.jpeg',
     after: '/badneu.jpeg',
   },
   {
     id: 2,
-    title: 'WC-Reinigung',
+    title: 'Grundreinigung',
     category: 'Innenraum',
     before: '/wcalt.jpeg',
     after: '/wcneu.jpeg',
@@ -37,6 +37,24 @@ const galleryItems: GalleryItem[] = [
     title: 'Winterdienst',
     category: 'Außen',
     image: '/winterdienst2.jpeg',
+  },
+  {
+    id: 5,
+    title: 'Büroreinigung',
+    category: 'Gewerbe',
+    image: '/Staubsauger.png',
+  },
+  {
+    id: 6,
+    title: 'Büroreinigung',
+    category: 'Gewerbe',
+    image: '/Treppe.png',
+  },
+  {
+    id: 7,
+    title: 'Büroreinigung',
+    category: 'Gewerbe',
+    image: '/Büro.png',
   },
 ];
 
@@ -145,7 +163,7 @@ export function Gallery() {
 
                 {/* Title Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
-                  <h3 className="text-white text-lg font-bold">{item.title}</h3>
+                  <h3 className="text-white text-lg font-bold text-center">{item.title}</h3>
                 </div>
 
                 {/* Hover Hint - only for before/after */}
