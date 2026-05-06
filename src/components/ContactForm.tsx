@@ -184,7 +184,7 @@ export function ContactForm() {
                 <input
                   id="phone"
                   type="tel"
-                  placeholder="0176 647 529 95"
+                  placeholder="0178 3907693"
                   {...register('phone', { required: 'Telefonnummer ist erforderlich' })}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
                 />

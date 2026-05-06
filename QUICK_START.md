@@ -33,7 +33,7 @@ Bearbeite `src/lib/constants.ts`:
 ```typescript
 export const COMPANY = {
   name: "AKCI Gebäudereinigung", // Dein Name
-  phone: "0176 647 529 95", // Deine Nummer
+  phone: "0178 3907693", // Deine Nummer
   email: "akci.gebaeudereinigung@gmail.com", // Deine Email
   address: "Volzstraße 7, 76185 Karlsruhe", // Deine Adresse
   ceo: "Gökhan Akci", // Geschäftsführer

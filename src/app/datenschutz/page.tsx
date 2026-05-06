@@ -81,7 +81,7 @@ export default function Datenschutz() {
               <p>
                 <strong>Akci Gebäudereinigung</strong><br />
                 Geschäftsführer: Gökhan Akci<br />
-                Telefon: 0176 647 52 99 95<br />
+                Telefon: 0178 3907693<br />
                 E-Mail: akci.gebaeudereinigung@gmail.com
               </p>
             </div>
@@ -135,7 +135,7 @@ export default function Datenschutz() {
             <div className="mt-4 p-4 bg-gray-100 rounded-lg">
               <p>
                 E-Mail: <a href="mailto:akci.gebaeudereinigung@gmail.com" className="text-primary-600 hover:text-primary-700">akci.gebaeudereinigung@gmail.com</a><br />
-                Telefon: <a href="tel:01766475299" className="text-primary-600 hover:text-primary-700">0176 647 52 99 95</a>
+                Telefon: <a href="tel:01783907693" className="text-primary-600 hover:text-primary-700">0178 3907693</a>
               </p>
             </div>
           </section>

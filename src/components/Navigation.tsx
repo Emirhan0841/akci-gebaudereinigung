@@ -47,7 +47,7 @@ export function Navigation() {
           {/* CTA Button */}
           <div className="hidden md:flex gap-4">
             <a
-              href="tel:0176647529995"
+              href="tel:01783907693"
               className="px-6 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors"
             >
               Jetzt anrufen
@@ -90,7 +90,7 @@ export function Navigation() {
               </Link>
             ))}
             <a
-              href="tel:0176647529995"
+              href="tel:01783907693"
               className="block mt-4 px-6 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 text-center"
             >
               Jetzt anrufen

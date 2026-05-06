@@ -103,7 +103,7 @@ Bearbeite `src/lib/constants.ts`:
 ```typescript
 export const COMPANY = {
   name: 'AKCI Gebäudereinigung',
-  phone: '0176 647 529 95',
+  phone: '0178 3907693',
   email: 'akci.gebaeudereinigung@gmail.com',
   address: 'Volzstraße 7, 76185 Karlsruhe',
   ceo: 'Gökhan Akci',
@@ -197,8 +197,8 @@ npm audit fix
 
 Bei Fragen oder Problemen:
 - 📧 Email: akci.gebaeudereinigung@gmail.com
-- 📞 Phone: 0176 647 529 95
-- 💬 WhatsApp: +49 176 647 529 95
+- 📞 Phone: 0178 3907693
+- 💬 WhatsApp: +49 178 3907693
 
 ## Lizenz
 

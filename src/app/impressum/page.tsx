@@ -30,7 +30,7 @@ export default function Impressum() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Kontaktinformationen</h3>
                 <p>
-                  Telefon: <a href="tel:01766475299" className="text-primary-600 hover:text-primary-700">0176 647 52 99 95</a>
+                  Telefon: <a href="tel:01783907693" className="text-primary-600 hover:text-primary-700">0178 3907693</a>
                 </p>
                 <p>
                   E-Mail: <a href="mailto:akci.gebaeudereinigung@gmail.com" className="text-primary-600 hover:text-primary-700">akci.gebaeudereinigung@gmail.com</a>
