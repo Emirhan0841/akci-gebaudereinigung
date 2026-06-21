@@ -33,7 +33,7 @@ export function About() {
           <div className="space-y-6 animate-slideUp">
             <div>
               <p className="text-primary-600 font-semibold mb-2">Über AKCI</p>
-              <h2 className="mb-4">Dein Partner für Sauberkheit</h2>
+              <h2 className="mb-4">Ihr Partner für Sauberkeit</h2>
               <p className="text-gray-700 text-lg leading-relaxed">
                 Seit über 10 Jahren vertrauen Hunderte von Kunden unserer Expertise. Wir sind stolz auf unsere hohe Qualität und den ausgezeichneten Kundenservice.
               </p>

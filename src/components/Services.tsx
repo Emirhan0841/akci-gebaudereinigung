@@ -65,7 +65,7 @@ export function Services() {
                   href="#contact"
                   className="inline-block px-6 py-3 bg-accent-500 text-white rounded-lg font-semibold hover:bg-accent-600 transition-colors"
                 >
-                  Angebot einholen
+                  Kostenfreies Angebot anfragen
                 </a>
               </div>
 
@@ -87,7 +87,7 @@ export function Services() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="text-gray-600 text-lg mb-6">
-            Interessiert? Wir erstellen dir gerne ein maßgeschneidertes Angebot!
+            Interessiert? Wir erstellen Ihnen gerne ein maßgeschneidertes Angebot!
           </p>
           <a
             href="#contact"

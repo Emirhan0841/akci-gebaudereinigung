@@ -34,7 +34,7 @@ export function Hero() {
                 href="#contact"
                 className="inline-flex items-center justify-center px-8 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors"
               >
-                Kostenfreies Angebot
+                Kostenfreies Angebot anfragen
               </a>
               <a
                 href="#services"
@@ -56,7 +56,7 @@ export function Hero() {
               </div>
               <div>
                 <p className="text-2xl font-bold text-primary-600">500+</p>
-                <p className="text-sm text-gray-600">Glückliche Kunden</p>
+                <p className="text-sm text-gray-600">glückliche Kunden</p>
               </div>
             </div>
           </div>

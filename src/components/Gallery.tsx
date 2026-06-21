@@ -101,7 +101,7 @@ export function Gallery() {
           <p className="text-primary-600 font-semibold mb-3">Portfolio</p>
           <h2 className="mb-6">Unsere Arbeiten</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Schau dir an, wie wir Räume verwandeln und zum Glänzen bringen.
+            Schauen Sie sich an, wie wir Räume verwandeln und zum Glänzen bringen.
           </p>
         </div>
 
@@ -198,7 +198,7 @@ export function Gallery() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="text-gray-600 text-lg mb-6">
-            Möchtest du, dass wir auch deine Räume so zum Glänzen bringen?
+            Möchten Sie, dass wir auch Ihre Räume zum Glänzen bringen?
           </p>
           <a
             href="#contact"

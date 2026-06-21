@@ -72,7 +72,7 @@ export const SERVICES = [
   },
   {
     id: 'gebaeudeverwaltung',
-    name: 'Gebäudverwaltung',
+    name: 'Gebäudeverwaltung',
     description: 'Umfassende Reinigungslösungen für Ihre Immobilie',
     icon: '📋',
     features: [

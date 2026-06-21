@@ -63,9 +63,9 @@ export function ContactForm() {
           <div className="space-y-8 animate-slideUp">
             <div>
               <p className="text-primary-600 font-semibold mb-3">Kontakt</p>
-              <h2 className="mb-4">Lass uns dich kennenlernen</h2>
+              <h2 className="mb-4">Lassen Sie uns Ihr Anliegen kennenlernen</h2>
               <p className="text-xl text-gray-600">
-                Hast du Fragen? Wir sind gerne für dich da und erstellen dir ein maßgeschneidertes Angebot.
+                Haben Sie Fragen? Wir sind gerne für Sie da und erstellen Ihnen ein maßgeschneidertes Angebot.
               </p>
             </div>
 
@@ -110,7 +110,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">WhatsApp</h3>
-                  <p className="text-gray-600">Schreib uns direkt eine Nachricht</p>
+                  <p className="text-gray-600">Schreiben Sie uns direkt eine Nachricht</p>
                 </div>
               </a>
 
@@ -139,7 +139,7 @@ export function ContactForm() {
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
-                  Dein Name *
+                  Ihr Name *
                 </label>
                 <input
                   id="name"
@@ -196,7 +196,7 @@ export function ContactForm() {
               {/* Service */}
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-900 mb-2">
-                  Welche Leistung interessiert dich? *
+                  Welche Leistung interessiert Sie? *
                 </label>
                 <select
                   id="service"
@@ -224,7 +224,7 @@ export function ContactForm() {
                 </label>
                 <textarea
                   id="message"
-                  placeholder="Schreib uns gerne etwas über dein Anliegen..."
+                  placeholder="Schreiben Sie uns gerne etwas über Ihr Anliegen..."
                   rows={4}
                   {...register('message')}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors resize-none"
@@ -234,7 +234,7 @@ export function ContactForm() {
               {/* Submit Status */}
               {submitStatus === 'success' && (
                 <div className="p-4 bg-green-50 border-2 border-green-200 rounded-lg text-green-700 font-medium">
-                  ✓ Deine Nachricht wurde erfolgreich versendet!
+                  ✓ Ihre Nachricht wurde erfolgreich versendet!
                 </div>
               )}
               {submitStatus === 'error' && (
@@ -249,11 +249,11 @@ export function ContactForm() {
                 disabled={isSubmitting}
                 className="w-full px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Wird versendet...' : 'Angebot anfordern'}
+                {isSubmitting ? 'Wird versendet...' : 'Kostenfreies Angebot anfragen'}
               </button>
 
               <p className="text-xs text-gray-500 text-center">
-                Deine Daten werden vertraulich behandelt. Wir antworten innerhalb von 24 Stunden.
+                Ihre Daten werden vertraulich behandelt. Wir antworten innerhalb von 24 Stunden.
               </p>
             </form>
           </div>
